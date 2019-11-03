@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Let's Steak e Beer",
+    "picture": "http://www.terralonline.com.br/wp-content/uploads/2019/05/1-LETS-min.png",
+    "rating": "4.3",
+    "foodType": "Música ao vivo",
+    "distance": "0,6 km",
+    "deliveryTime": "5 min",
+    "deliveryPrice": "$$"
+  },
+  {
+    "name": "Balístico Music Bar",
+    "picture": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032012/logobalisticomusicbar.jpg?",
+    "rating": "4.1",
+    "foodType": "Música ao vivo",
+    "distance": "1.2 km",
+    "deliveryTime": "12 min",
+    "deliveryPrice": "$$"
+  },
+  {
+    "name": "Woods Vitória",
+    "picture": "http://www.guiagphr.com.br/Imagens/galeria_15391_0327165111.jpg",
+    "rating": "4.0",
+    "foodType": "Música ao vivo",
+    "distance": "1.9 km",
+    "deliveryTime": "18 min",
+    "deliveryPrice": "$$$"
+  },
+  {
+    "name": "Cenarium Bar",
+    "picture": "https://i.imgur.com/k64ATMr.jpg",
+    "rating": "4.2",
+    "foodType": "Música ao vivo",
+    "distance": "2.4 km",
+    "deliveryTime": "26 min",
+    "deliveryPrice": "$$"
+  },
+  {
+    "name": "Beb's Bar",
+    "picture": "https://guiabh.com.br/Repositorio/Upload/Destaque/320x320/bebs-bar-imagem-logo.jpg",
+    "rating": "4.3",
+    "foodType": "Música ao vivo",
+    "distance": "1.4 km",
+    "deliveryTime": "8 min",
+    "deliveryPrice": "$$"
+  },
+  {
+    "name": "Wanted Pub",
+    "picture": "https://i.imgur.com/HTHDVEd.png",
+    "rating": "4.4",
+    "foodType": "Música ao vivo",
+    "distance": "1.6 km",
+    "deliveryTime": "18 min",
+    "deliveryPrice": "$$"
+  }
+]
