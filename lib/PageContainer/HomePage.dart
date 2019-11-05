@@ -1,21 +1,19 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:uniuitest/constants.dart';
-import '../ElementsContainer/restaurant.dart';
-import '../ElementsContainer/restaurant_card.dart';
+import '../ElementsContainer/Event.dart';
+import '../ElementsContainer/EventCard.dart';
 
 class HomePage extends StatefulWidget {
-  static String id = 'list_restaurants';
+  static String id = 'eventID';
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  var contents = "Busca";
   bool _loading = false;
-  List<Restaurant> _restaurants = [];
+  List<Event> _events = [];
 
   @override
   void initState() {
@@ -29,48 +27,48 @@ class _HomePageState extends State<HomePage> {
       _loading = true;
     });
 
-    List<Restaurant> restaurants = [];
-    if (_restaurants.length < 1) {
-      restaurants = await _loadRestaurants();
+    List<Event> events = [];
+    if (_events.length < 1) {
+      events = await _loadEvents();
     }
 
     setState(() {
-      _restaurants = restaurants.length > 1 ? restaurants : _restaurants;
+      _events = events.length > 1 ? events : _events;
       _loading = false;
     });
   }
 
-  Future<List<Restaurant>> _loadRestaurants() async {
+  Future<List<Event>> _loadEvents() async {
     List<dynamic> json =
-        jsonDecode(await rootBundle.loadString('assets/restaurants.json'));
-    List<Restaurant> restaurants = [];
+        jsonDecode(await rootBundle.loadString('assets/Events.json'));
+    List<Event> events = [];
 
-    for (var restaurant in json) {
-      restaurants.add(Restaurant.fromJson(restaurant));
+    for (var event in json) {
+      events.add(Event.fromJson(event));
     }
 
-    return restaurants;
+    return events;
   }
 
-  Widget _buildRestaurants() {
+  Widget _buildEvents() {
     return SliverFixedExtentList(
       itemExtent: 108.0,
       delegate: SliverChildBuilderDelegate(
         (context, index) {
-          Restaurant restaurant = _restaurants[index];
+          Event event = _events[index];
 
-          return RestaurantCard(
-            key: Key('${restaurant.name}_${restaurant.picture}'),
-            picture: restaurant.picture,
-            name: restaurant.name,
-            deliveryPrice: restaurant.deliveryPrice,
-            deliveryTime: restaurant.deliveryTime,
-            distance: restaurant.distance,
-            foodType: restaurant.foodType,
-            rating: restaurant.rating,
+          return EventCard(
+            key: Key('${event.name}_${event.picture}'),
+            picture: event.picture,
+            name: event.name,
+            costAverage: event.costAverage,
+            arriveEstimate: event.arriveEstimate,
+            distance: event.distance,
+            musicGender: event.musicGender,
+            rating: event.rating,
           );
         },
-        childCount: _restaurants.length,
+        childCount: _events.length,
       ),
     );
   }
@@ -96,7 +94,7 @@ class _HomePageState extends State<HomePage> {
         ),
         child: SafeArea(
           child: Container(
-            color: kBackgroundColor,
+            color: Colors.black26,
             child: CustomScrollView(
               slivers: <Widget>[
                 SliverAppBar(
@@ -116,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                                 '',
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
-                                  color: kBrandDarkenGrey,
+                                  color: Colors.black87,
                                   fontSize: 17.0,
                                 ),
                               ),
@@ -126,13 +124,13 @@ class _HomePageState extends State<HomePage> {
                                   Text(
                                     'Localização ',
                                     style: TextStyle(
-                                        color: kBrandDarkerGrey,
+                                        color: Colors.black87,
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.w500),
                                   ),
                                   Icon(
                                     Icons.edit_location,
-                                    color: kBrandRed,
+                                    color: Colors.deepPurple[900],
                                     size: 18.0,
                                   )
                                 ],
@@ -154,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                       centerTitle: false,
                       title: Container(
                         decoration: BoxDecoration(
-                          color: kBrandGrey,
+                          color: Colors.grey[50],
                           borderRadius: BorderRadius.circular(6.0),
                         ),
                         child: TextField(
@@ -163,11 +161,11 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.all(8.0),
                               child: Icon(
                                 Icons.search,
-                                color: kBrandRed,
+                                color: Colors.grey,
                               ),
                             ),
                             hintText: 'Encontre seu ambiente',
-                            hintStyle: TextStyle(color: kBrandDarkGrey),
+                            hintStyle: TextStyle(color: Colors.grey),
                             border: InputBorder.none,
                           ),
                         ),
@@ -179,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                             child: Text(
                               'Filtros',
                               style: TextStyle(
-                                color: kBrandRed,
+                                color: Colors.deepPurple[900],
                                 fontSize: 16.0,
                               ),
                             ),
@@ -225,7 +223,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ]),
                   ),
-                  _buildRestaurants()
+                  _buildEvents()
                 ],
               ],
             ),

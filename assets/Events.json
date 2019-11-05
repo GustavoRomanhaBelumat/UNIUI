@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Let's Steak e Beer",
+    "picture": "http://www.terralonline.com.br/wp-content/uploads/2019/05/1-LETS-min.png",
+    "rating": "4.3",
+    "musicGender": "Música ao vivo",
+    "distance": "0,6 km",
+    "arriveEstimate": "5 min",
+    "costAverage": "$$"
+  },
+  {
+    "name": "Balístico Music Bar",
+    "picture": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/032012/logobalisticomusicbar.jpg?",
+    "rating": "4.1",
+    "musicGender": "Música ao vivo",
+    "distance": "1.2 km",
+    "arriveEstimate": "12 min",
+    "costAverage": "$$"
+  },
+  {
+    "name": "Woods Vitória",
+    "picture": "http://www.guiagphr.com.br/Imagens/galeria_15391_0327165111.jpg",
+    "rating": "4.0",
+    "musicGender": "Música ao vivo",
+    "distance": "1.9 km",
+    "arriveEstimate": "18 min",
+    "costAverage": "$$$"
+  },
+  {
+    "name": "Cenarium Bar",
+    "picture": "https://i.imgur.com/k64ATMr.jpg",
+    "rating": "4.2",
+    "musicGender": "Música ao vivo",
+    "distance": "2.4 km",
+    "arriveEstimate": "26 min",
+    "costAverage": "$$"
+  },
+  {
+    "name": "Beb's Bar",
+    "picture": "https://guiabh.com.br/Repositorio/Upload/Destaque/320x320/bebs-bar-imagem-logo.jpg",
+    "rating": "4.3",
+    "musicGender": "Música ao vivo",
+    "distance": "1.4 km",
+    "arriveEstimate": "8 min",
+    "costAverage": "$$"
+  },
+  {
+    "name": "Wanted Pub",
+    "picture": "https://i.imgur.com/HTHDVEd.png",
+    "rating": "4.4",
+    "musicGender": "Música ao vivo",
+    "distance": "1.6 km",
+    "arriveEstimate": "18 min",
+    "costAverage": "$$"
+  }
+]
