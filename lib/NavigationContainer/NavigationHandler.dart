@@ -4,6 +4,7 @@ import '../PageContainer/ProfilePage.dart';
 import '../PageContainer/PurchasesPage.dart';
 import '../PageContainer/WalletPage.dart';
 import '../PageContainer/HelpPage.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -62,10 +63,13 @@ class _MyAppState extends State<MyApp> {
           ),
           Scaffold(
             backgroundColor: Colors.transparent,
-            appBar: AppBar(
-              backgroundColor: Colors.transparent,
-              title: Text("U N I (Alfa Build 0.2)"),
-            ),
+            appBar: PreferredSize(
+                preferredSize: Size.fromHeight(25.0),
+                child: AppBar(
+                  bottomOpacity: 0.1,
+                  backgroundColor: Colors.transparent,
+                  title: Text("U N I (Alfa Build 0.2)"),
+                )),
             body: callPage(_currentIndex),
             bottomNavigationBar: Theme(
               data: Theme.of(context).copyWith(
