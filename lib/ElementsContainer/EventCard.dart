@@ -43,10 +43,10 @@ class EventCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0.0),
         child: Card(
           clipBehavior: Clip.antiAlias,
-          elevation: 3.5,
+          elevation: 0.1,
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.deepPurple[50]),
+              border: Border.all(color: Colors.transparent),
               borderRadius: BorderRadius.all(
                 Radius.circular(4),
               ),
@@ -104,22 +104,6 @@ class EventCard extends StatelessWidget {
                         ),
                         Row(
                           children: <Widget>[
-                            Icon(
-                              Icons.star,
-                              color: Colors.orangeAccent,
-                              size: 18.0,
-                            ),
-                            SizedBox(
-                              width: 3,
-                            ),
-                            Text(
-                              rating,
-                              style: TextStyle(
-                                color: Colors.orangeAccent,
-                                fontSize: 13,
-                              ),
-                            ),
-                            _dotSeparator(),
                             Text(
                               musicGender,
                               style: TextStyle(
@@ -135,6 +119,26 @@ class EventCard extends StatelessWidget {
                                 fontSize: 13,
                               ),
                             )
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            Icon(
+                              Icons.star,
+                              color: Colors.orangeAccent,
+                              size: 25.0,
+                            ),
+                            SizedBox(
+                              width: 3,
+                            ),
+                            Text(
+                              rating,
+                              style: TextStyle(
+                                color: Colors.orangeAccent,
+                                fontSize: 25,
+                              ),
+                            ),
                           ],
                         ),
                         SizedBox(

@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
               slivers: <Widget>[
                 SliverAppBar(
                   backgroundColor: Colors.white,
-                  expandedHeight: 80.0,
+                  expandedHeight: 60.0,
                   flexibleSpace: FlexibleSpaceBar(
                     background: Stack(
                       children: <Widget>[
@@ -110,29 +110,21 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text(
-                                '',
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 17.0,
-                                ),
-                              ),
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: <Widget>[
+                                  Icon(
+                                    Icons.location_on,
+                                    color: Colors.deepPurple[900],
+                                    size: 18.0,
+                                  ),
                                   Text(
                                     'Localização ',
                                     style: TextStyle(
                                         color: Colors.black87,
-                                        fontSize: 18.0,
-                                        fontWeight: FontWeight.w500),
+                                        fontSize: 17.0,
+                                        fontWeight: FontWeight.w300),
                                   ),
-                                  Icon(
-                                    Icons.edit_location,
-                                    color: Colors.deepPurple[900],
-                                    size: 18.0,
-                                  )
                                 ],
                               ),
                             ],

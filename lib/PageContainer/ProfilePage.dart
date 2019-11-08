@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../VisualsEnhancements/ProportionalResizer.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 void main() => runApp(ProfilePage());
@@ -8,7 +9,11 @@ final Color green = Color(0xFF1E8161);
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
+      color: Colors.transparent,
+      height: SizeConfig.blockSizeVertical * 100,
+      width: SizeConfig.blockSizeHorizontal * 100,
       child: ListView(
         children: <Widget>[
           Column(
@@ -71,10 +76,11 @@ class ProfilePage extends StatelessWidget {
                   children: <Widget>[
                     LinearPercentIndicator(
                       alignment: MainAxisAlignment.center,
-                      width: 130.0,
+                      width: 120,
                       lineHeight: 6.0,
                       percent: 0.2,
                       progressColor: Colors.amber,
+                      backgroundColor: Colors.white70,
                       animationDuration: 500,
                     ),
                   ],
@@ -150,10 +156,11 @@ class ProfilePage extends StatelessWidget {
                               padding: const EdgeInsets.only(
                                   left: 2, top: 1, bottom: 2),
                               child: LinearPercentIndicator(
-                                width: 190.0,
-                                lineHeight: 3.0,
+                                width: SizeConfig.blockSizeHorizontal * 60,
+                                lineHeight: 4.0,
                                 percent: 0.75,
                                 progressColor: Colors.amber,
+                                backgroundColor: Colors.transparent,
                                 animationDuration: 500,
                               ),
                             ),
@@ -238,10 +245,11 @@ class ProfilePage extends StatelessWidget {
                               padding: const EdgeInsets.only(
                                   left: 2, top: 1, bottom: 2),
                               child: LinearPercentIndicator(
-                                width: 190.0,
-                                lineHeight: 3.0,
+                                width: SizeConfig.blockSizeHorizontal * 60,
+                                lineHeight: 4.0,
                                 percent: 0.25,
                                 progressColor: Colors.amber,
+                                backgroundColor: Colors.transparent,
                                 animationDuration: 500,
                               ),
                             ),
@@ -326,10 +334,11 @@ class ProfilePage extends StatelessWidget {
                               padding: const EdgeInsets.only(
                                   left: 2, top: 1, bottom: 2),
                               child: LinearPercentIndicator(
-                                width: 190.0,
-                                lineHeight: 3.0,
+                                width: SizeConfig.blockSizeHorizontal * 60,
+                                lineHeight: 4.0,
                                 percent: 0.50,
                                 progressColor: Colors.amber,
+                                backgroundColor: Colors.transparent,
                                 animationDuration: 500,
                               ),
                             ),
@@ -354,6 +363,23 @@ class ProfilePage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              Icon(Icons.blur_on),
+              SizedBox(
+                width: SizeConfig.blockSizeHorizontal * 60,
+                height: SizeConfig.blockSizeVertical * 6,
+                child: RaisedButton(
+                    key: null,
+                    onPressed: () {},
+                    color: const Color(0xFFe0e0e0),
+                    child: Text(
+                      "Pagar amigo",
+                      style: TextStyle(
+                          fontSize: 12.0,
+                          color: const Color(0xFF7B051A),
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Roboto"),
+                    )),
               ),
             ],
           ),
