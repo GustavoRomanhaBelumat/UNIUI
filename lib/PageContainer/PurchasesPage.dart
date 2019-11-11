@@ -7,7 +7,7 @@ class PurchasesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.transparent,
-      child: Text("Pagina de compras em construção."),
+      child: ListView(),
     );
   }
 }

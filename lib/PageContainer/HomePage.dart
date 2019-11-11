@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:uniuitest/constants.dart';
 import '../ElementsContainer/Event.dart';
 import '../ElementsContainer/EventCard.dart';
 
@@ -83,8 +84,8 @@ class _HomePageState extends State<HomePage> {
             begin: Alignment.centerLeft,
             end: Alignment(1.0, -0.2),
             colors: [
-              const Color(0xFFc43f79),
-              const Color(0xFF400d3e),
+              const Color(0xFFB20030),
+              const Color(0xFF530109),
             ],
             stops: [
               0.1,
@@ -115,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                                 children: <Widget>[
                                   Icon(
                                     Icons.location_on,
-                                    color: Colors.deepPurple[900],
+                                    color: darkBloodRed,
                                     size: 18.0,
                                   ),
                                   Text(
@@ -169,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                             child: Text(
                               'Filtros',
                               style: TextStyle(
-                                color: Colors.deepPurple[900],
+                                color: darkBloodRed,
                                 fontSize: 16.0,
                               ),
                             ),

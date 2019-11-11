@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:uniuitest/constants.dart';
 
 class EventCard extends StatelessWidget {
   final String name;
@@ -25,7 +26,7 @@ class EventCard extends StatelessWidget {
   Widget _dotSeparator() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.black54,
+        color: darkBloodRed,
         borderRadius: BorderRadius.circular(50),
       ),
       margin: EdgeInsets.symmetric(horizontal: 4),
@@ -99,6 +100,8 @@ class EventCard extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           softWrap: false,
                           style: TextStyle(
+                            color: darkBloodRed,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -107,7 +110,7 @@ class EventCard extends StatelessWidget {
                             Text(
                               musicGender,
                               style: TextStyle(
-                                color: Colors.black54,
+                                color: darkBloodRed,
                                 fontSize: 13,
                               ),
                             ),
@@ -115,7 +118,7 @@ class EventCard extends StatelessWidget {
                             Text(
                               distance,
                               style: TextStyle(
-                                color: Colors.black54,
+                                color: darkBloodRed,
                                 fontSize: 13,
                               ),
                             )
@@ -137,6 +140,7 @@ class EventCard extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.orangeAccent,
                                 fontSize: 25,
+                                fontWeight: FontWeight.bold
                               ),
                             ),
                           ],
@@ -146,10 +150,16 @@ class EventCard extends StatelessWidget {
                         ),
                         Row(
                           children: <Widget>[
+                            Icon(
+                              Icons.directions,
+                              color: darkBloodRed,
+                              size: 10,
+                            ),
+                            _dotSeparator(),
                             Text(
                               arriveEstimate,
                               style: TextStyle(
-                                color: Colors.black54,
+                                color: darkBloodRed,
                                 fontSize: 12,
                               ),
                             ),
@@ -157,7 +167,7 @@ class EventCard extends StatelessWidget {
                             Text(
                               costAverage,
                               style: TextStyle(
-                                color: Colors.black54,
+                                color: darkBloodRed,
                                 fontSize: 12,
                               ),
                             )

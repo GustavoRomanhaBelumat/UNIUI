@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:uniuitest/constants.dart';
 import '../PageContainer/HomePage.dart';
 import '../PageContainer/ProfilePage.dart';
 import '../PageContainer/PurchasesPage.dart';
 import '../PageContainer/WalletPage.dart';
 import '../PageContainer/HelpPage.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -41,7 +43,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "UNI (Alfa Build 0.2)",
       theme: ThemeData(
-        primaryColor: Colors.deepPurple,
+        primaryColor: darkBloodRed,
       ),
       home: Stack(
         children: <Widget>[
@@ -51,8 +53,8 @@ class _MyAppState extends State<MyApp> {
                 begin: Alignment.centerLeft,
                 end: Alignment(1.0, -0.2),
                 colors: [
-                  const Color(0xFFc43f79),
-                  const Color(0xFF400d3e),
+                  const Color(0xFFB20030),
+                  const Color(0xFF530109),
                 ],
                 stops: [
                   0.1,

@@ -10,8 +10,10 @@ dependencies:
   flutter:
     sdk: flutter
   percent_indicator:
+
   cupertino_icons: ^0.1.2
   cached_network_image: ^1.1.0
+  flutter_icons:
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import '../NavigationContainer/NavigationHandler.dart';
+
 void main() => runApp(WelcomePage());
 
 class WelcomePage extends StatefulWidget {
@@ -10,6 +11,7 @@ class WelcomePage extends StatefulWidget {
   @override
   _WelcomePageState createState() => _WelcomePageState();
 }
+
 @override
 class _WelcomePageState extends State<WelcomePage> {
   var contents = "Inicio";
@@ -19,6 +21,16 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 
   Widget build(BuildContext context) {
+    Text(
+      "Faça seu login",
+      textAlign: TextAlign.center,
+      style: TextStyle(
+          decoration: TextDecoration.none,
+          fontSize: 14.0,
+          color: const Color(0xFFffffff),
+          fontWeight: FontWeight.w400,
+          fontFamily: "Roboto"),
+    );
     return Stack(
       children: <Widget>[
         Scaffold(
@@ -44,16 +56,6 @@ class _WelcomePageState extends State<WelcomePage> {
                 Image(image: AssetImage('gitassets/logo.png')),
                 SizedBox(
                   height: 40,
-                ),
-                Text(
-                  'Faça seu login',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontSize: 14.0,
-                      color: const Color(0xFFffffff),
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "Roboto"),
                 ),
                 SizedBox(
                   height: 5,
@@ -115,8 +117,8 @@ class _WelcomePageState extends State<WelcomePage> {
               begin: Alignment.centerLeft,
               end: Alignment(1.0, -0.2),
               colors: [
-                const Color(0xFFc43f79),
-                const Color(0xFF400d3e),
+                const Color(0xFFB20030),
+                const Color(0xFF530109),
               ],
               stops: [
                 0.1,

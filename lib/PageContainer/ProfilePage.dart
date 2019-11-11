@@ -1,9 +1,12 @@
+import '../constants.dart';
 import 'package:flutter/material.dart';
 import '../VisualsEnhancements/ProportionalResizer.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 void main() => runApp(ProfilePage());
-final String url = 'https://i.redd.it/85z7uqfl96z01.jpg';
+final String url =
+    'https://cdn.mos.cms.futurecdn.net/VmPnoyzkPiscEeEF9cdjET-970-80.jpg';
 final Color green = Color(0xFF1E8161);
 
 class ProfilePage extends StatelessWidget {
@@ -11,7 +14,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Container(
-      color: Colors.transparent,
+      color: Colors.white,
       height: SizeConfig.blockSizeVertical * 100,
       width: SizeConfig.blockSizeHorizontal * 100,
       child: ListView(
@@ -22,8 +25,8 @@ class ProfilePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
-                    width: 120,
-                    height: 120,
+                    width: 80,
+                    height: 80,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
@@ -38,15 +41,15 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       'Elon Musk',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 24,
+                          color: darkBloodRed,
+                          fontSize: 22,
                           fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 1, bottom: 2, right: 13),
+                padding: const EdgeInsets.only(top: 1, bottom: 2),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -54,14 +57,14 @@ class ProfilePage extends StatelessWidget {
                       'Idade: 48 anos',
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                          color: Colors.white,
+                          color: darkBloodRed,
                           fontSize: 10,
                           fontWeight: FontWeight.normal),
                     ),
                     Text(
                       'Mora em: Algum lugar',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: darkBloodRed,
                           fontSize: 10,
                           fontWeight: FontWeight.normal),
                     ),
@@ -80,24 +83,31 @@ class ProfilePage extends StatelessWidget {
                       lineHeight: 6.0,
                       percent: 0.2,
                       progressColor: Colors.amber,
-                      backgroundColor: Colors.white70,
+                      backgroundColor: Colors.black12,
                       animationDuration: 500,
                     ),
                   ],
                 ),
               ),
-              Icon(
-                Icons.group,
-                color: Colors.white70,
-              ),
-              Text(
-                "226 Amigos",
-                style: TextStyle(color: Colors.white70),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.group,
+                    color: Colors.black38,
+                    size: 10,
+                  ),
+                  Text(
+                    " 226 Amigos",
+                    style: TextStyle(color: darkBloodRed, fontSize: 10),
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 6, bottom: 6),
               ),
               Card(
+                elevation: 0.0,
                 color: Colors.transparent,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -128,7 +138,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "CONSUMO",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -143,7 +153,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "Seu consumo gera pontos.",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 8,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -160,7 +170,7 @@ class ProfilePage extends StatelessWidget {
                                 lineHeight: 4.0,
                                 percent: 0.75,
                                 progressColor: Colors.amber,
-                                backgroundColor: Colors.transparent,
+                                backgroundColor: Colors.black12,
                                 animationDuration: 500,
                               ),
                             ),
@@ -174,7 +184,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "28.5k pontos",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 8,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -187,6 +197,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               Card(
+                elevation: 0.0,
                 color: Colors.transparent,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -217,7 +228,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "AVALIAÇÃO",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -232,7 +243,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "Avalie os eventos e ganhe pontos.",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 8,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -249,7 +260,7 @@ class ProfilePage extends StatelessWidget {
                                 lineHeight: 4.0,
                                 percent: 0.25,
                                 progressColor: Colors.amber,
-                                backgroundColor: Colors.transparent,
+                                backgroundColor: Colors.black12,
                                 animationDuration: 500,
                               ),
                             ),
@@ -263,7 +274,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "7.5k pontos",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 8,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -276,6 +287,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               Card(
+                elevation: 0.0,
                 color: Colors.transparent,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -306,7 +318,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "INTERAÇÃO",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -321,7 +333,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "Responda questionários e ganhe pontos.",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 8,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -338,7 +350,7 @@ class ProfilePage extends StatelessWidget {
                                 lineHeight: 4.0,
                                 percent: 0.50,
                                 progressColor: Colors.amber,
-                                backgroundColor: Colors.transparent,
+                                backgroundColor: Colors.black12,
                                 animationDuration: 500,
                               ),
                             ),
@@ -352,7 +364,7 @@ class ProfilePage extends StatelessWidget {
                               child: Text(
                                 "14.2k pontos",
                                 style: TextStyle(
-                                    color: Colors.white,
+                                    color: darkBloodRed,
                                     fontSize: 8,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -364,22 +376,30 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              Icon(Icons.blur_on),
+              SizedBox(
+                height: 10,
+              ),
               SizedBox(
                 width: SizeConfig.blockSizeHorizontal * 60,
                 height: SizeConfig.blockSizeVertical * 6,
                 child: RaisedButton(
-                    key: null,
-                    onPressed: () {},
-                    color: const Color(0xFFe0e0e0),
-                    child: Text(
-                      "Pagar amigo",
+                  key: null,
+                  onPressed: () {},
+                  color: const Color(0xFFe0e0e0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Icon(
+                        MaterialCommunityIcons.getIconData("qrcode"),
+                        color: darkBloodRed,
+                      ),
+                      Text("Pagar amigo",
                       style: TextStyle(
-                          fontSize: 12.0,
-                          color: const Color(0xFF7B051A),
-                          fontWeight: FontWeight.w500,
-                          fontFamily: "Roboto"),
-                    )),
+                        color: darkBloodRed
+                      ),)
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
