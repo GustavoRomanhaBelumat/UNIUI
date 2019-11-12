@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "UNI (Alfa Build 0.2)",
+      title: "UNI (Alfa Build 0.21)",
       theme: ThemeData(
         primaryColor: darkBloodRed,
       ),

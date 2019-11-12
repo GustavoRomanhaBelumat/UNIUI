@@ -5,7 +5,7 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
 void main() => runApp(ProfilePage());
-final String url =
+final String urlz =
     'https://cdn.mos.cms.futurecdn.net/VmPnoyzkPiscEeEF9cdjET-970-80.jpg';
 final Color green = Color(0xFF1E8161);
 
@@ -30,7 +30,7 @@ class ProfilePage extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            fit: BoxFit.fill, image: NetworkImage(url))),
+                            fit: BoxFit.fill, image: NetworkImage(urlz))),
                   ),
                 ],
               ),
@@ -106,6 +106,7 @@ class ProfilePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 6, bottom: 6),
               ),
+              Divider(),
               Card(
                 elevation: 0.0,
                 color: Colors.transparent,
@@ -120,7 +121,7 @@ class ProfilePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                fit: BoxFit.fill, image: NetworkImage(url))),
+                                fit: BoxFit.fill, image: NetworkImage(urlz))),
                       ),
                       radius: 70.0,
                       lineWidth: 5.0,
@@ -209,7 +210,7 @@ class ProfilePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                fit: BoxFit.fill, image: NetworkImage(url))),
+                                fit: BoxFit.fill, image: NetworkImage(urlz))),
                       ),
                       radius: 70.0,
                       lineWidth: 5.0,
@@ -299,7 +300,7 @@ class ProfilePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                fit: BoxFit.fill, image: NetworkImage(url))),
+                                fit: BoxFit.fill, image: NetworkImage(urlz))),
                       ),
                       radius: 70.0,
                       lineWidth: 5.0,
@@ -376,9 +377,7 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              Divider(),
               SizedBox(
                 width: SizeConfig.blockSizeHorizontal * 60,
                 height: SizeConfig.blockSizeVertical * 6,
@@ -393,10 +392,10 @@ class ProfilePage extends StatelessWidget {
                         MaterialCommunityIcons.getIconData("qrcode"),
                         color: darkBloodRed,
                       ),
-                      Text("Pagar amigo",
-                      style: TextStyle(
-                        color: darkBloodRed
-                      ),)
+                      Text(
+                        "Pagar amigo",
+                        style: TextStyle(color: darkBloodRed),
+                      )
                     ],
                   ),
                 ),

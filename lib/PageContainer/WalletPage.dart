@@ -7,7 +7,7 @@ import 'package:uniuitest/VisualsEnhancements/ProportionalResizer.dart';
 void main() => runApp(WalletPage());
 
 class WalletPage extends StatelessWidget {
-  final String url = 'https://cdn.mos.cms.futurecdn.net/VmPnoyzkPiscEeEF9cdjET-970-80.jpg';
+  final String urls = 'https://cdn.mos.cms.futurecdn.net/VmPnoyzkPiscEeEF9cdjET-970-80.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class WalletPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                fit: BoxFit.fill, image: NetworkImage(url))),
+                                fit: BoxFit.fill, image: NetworkImage(urls))),
                       ),
                       radius: 70.0,
                       lineWidth: 5.0,
@@ -50,6 +50,7 @@ class WalletPage extends StatelessWidget {
                     )
                   ],
                 ),
+                Divider(),
                 Padding(
                   padding:
                       EdgeInsets.only(top: 20, bottom: 10, left: 10, right: 10),
