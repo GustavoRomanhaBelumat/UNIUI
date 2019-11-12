@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:uniuitest/constants.dart';
 import '../PageContainer/HomePage.dart';
@@ -5,7 +6,6 @@ import '../PageContainer/ProfilePage.dart';
 import '../PageContainer/PurchasesPage.dart';
 import '../PageContainer/WalletPage.dart';
 import '../PageContainer/HelpPage.dart';
-
 
 void main() => runApp(MyApp());
 
@@ -16,6 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _currentIndex = 0;
+
   Widget callPage(int currentIndex) {
     switch (currentIndex) {
       case 0:
@@ -40,6 +41,10 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       title: "UNI (Alfa Build 0.21)",
       theme: ThemeData(
@@ -70,7 +75,7 @@ class _MyAppState extends State<MyApp> {
                 child: AppBar(
                   bottomOpacity: 0.1,
                   backgroundColor: Colors.transparent,
-                  title: Text("U N I (Alfa Build 0.2)"),
+                  title: Text("U N I (Alfa Build 0.21)"),
                 )),
             body: callPage(_currentIndex),
             bottomNavigationBar: Theme(
